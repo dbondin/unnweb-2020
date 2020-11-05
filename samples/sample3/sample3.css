@@ -1,0 +1,103 @@
+
+body {
+    background-color: #e0e0e0;
+    background-image: url('bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/*
+      p {
+	  text-align: center;
+	  color: red;
+      }
+*/
+
+.center {
+    text-align: center;
+}
+
+.red {
+    color: red;
+}
+
+#mypara1 {
+    color: #804000; /* 80 - red, 40 - green, 00 - blue */
+}
+
+p.blue {
+    color: blue;
+}
+
+* {
+    font-family: sans-serif;
+}
+
+a:link {
+    color: red;
+}
+
+a:hover {
+    color: blue;
+}
+
+.firstletterpink::first-letter {
+    color: #ff8080;
+}
+
+a[alt="yyy"] {
+    background-color: yellow;
+}
+
+/*
+p.img {
+    background-image: url('bg.jpg');
+    background-repeat: repeat;
+    background-position: left top;
+}
+*/
+p.img {
+    background: gray url('bg.jpg') repeat scroll;
+}
+
+p.b1 {
+    border-style: solid;
+    border-color: green;
+    border-width: 1px;
+}
+
+p.b2 {
+    border-style: solid;
+    border-top-color: green;
+    border-right-color: red;
+    border-bottom-color: gray;
+    border-left-color: blue;
+    border-width: 5px 10px 15px 20px;
+    /*
+    border-top-width: 5px;
+    border-left-width: 10px;
+    ...
+   */
+}
+
+p.m2 {
+    margin: 10px;
+}    
+
+.m3 {
+    background-color: #c0c080;
+    border: solid red 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-left: 20px;
+    padding-right: 5px;
+    padding-top: 10px;
+    padding-bottom: 40px;
+}
+
+div.s1 {
+    border: solid red 1px;
+    max-width: 500px;
+    min-width: 400px;
+}
