@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+  </head>
+  <body>
+    <script>
+
+      var log = console.log;
+      
+      var s1 = "hello";
+      var s2 = 'hello';
+      console.log(s1===s2);
+      
+      var s3 = new String("hello"); // NOT recommended
+      console.log(s1===s3);
+
+      var s4 = "Hello\t\t\tWorld \"this part is in doublequotes\"";
+      console.log(s4);
+
+      var s5 = "This is multi-line \
+string and this is ok \
+in java-script";
+      console.log(s5);
+
+      var s6 = "This is multi-line "
+             + "string and this is ok "
+             + "in java-script";
+      console.log(s6);
+      log(s6.length);
+
+      var i = s6.indexOf("multi");
+      log(i);
+      log(s6.indexOf("hello"));
+
+      log(s6.search(/t..s/i)); // regexp - /regexp/keys
+      log(s6.search(/t..s/));
+
+      log(s6.slice(5, 10));
+      log(s6);
+      log(s6.slice(-11, -7));
+
+      log(s6.replace("java", "vb")); // can use regexp
+      log(s6.replace(/i/gi, "1"));
+
+      log(s6.toUpperCase());
+
+      log(s6.concat(" ", "new string"));
+      log(s6 + " " + "new string"); // same as previous
+
+      log("<" + "    hello     ".trim() + ">");
+
+      log(s6.charAt(10));
+      log(s6.charCodeAt(10));
+
+      var s7 = "one,two,three,more";
+      var a7 = s7.split(",");
+      log(typeof s7);
+      log(typeof a7);
+      log(a7);
+
+      var s8 = "100";
+      var s9 = "5";
+      var n1 = s8 / s9; // / * - **
+      log((typeof s8) + " " + (typeof s9) + " " + (typeof n1) + " " + n1);
+      var n2 = s8 + s9;
+      log((typeof n2) + " " + n2);
+
+      var n3 = NaN; // Not-a-Number (number)
+      log((typeof n3) + " " + n3);
+      var n4 = 100 / "hello";
+      log((typeof n4) + " " + n4);
+
+      var n5 = -100 / 0; // Infinity
+      log((typeof n5) + " " + n5);
+
+      var n6 = new Number(3.14); // Bad practice probably
+      log((typeof n6) + " " + n6);
+      
+      log(n1.toString());
+      log(n1.toString(10));
+      log(n1.toString(2));
+      log(n1.toString(16));
+
+      log(3.14.toExponential());
+      log(3.14.toFixed(10));
+      log(3.14.toPrecision(10));
+
+      var n7 = n6.valueOf();
+      log((typeof n7) + " " + n7);
+
+      var n8 = Number("123.456");
+      log((typeof n8) + " " + n8);
+      
+      var n9 = parseInt("123.456");
+      log((typeof n9) + " " + n9);
+      
+      var n10 = parseFloat("123.456dsds dsds dsd");
+      log((typeof n10) + " " + n10);
+
+      var n11 = 1 * "123.456"; // Trick
+      log((typeof n11) + " " + n11);
+      
+      var a1 = ["One", "Two", "Three"];
+      var a2 = new Array("One", "Two", "Three");
+      log(a1);
+      log(a2);
+
+      var a3 = [10];
+      var a4 = new Array(10); // Whats why this way is NOT good
+      log(a3);
+      log(a4);
+
+      log(a1.length);
+
+      var a5 = ["dmitry", "alex", "peter", "john", "michael", "julia", "beth"];
+      log(a5);
+      a5.sort();
+      log(a5);
+      a5.reverse();
+      log(a5);
+
+      function my_comp_fn(a, b) {
+	  if (a === "dmitry") return -1;
+	  return a > b;
+      }
+
+      a5.sort(my_comp_fn);
+      log(a5);
+
+      var a6 = [
+	  {name:"Dmitry", age:30},
+	  {name:"Alex", age:10},
+	  {name:"Beth", age:20},
+	  {name:"Michael", age:21}
+      ];
+
+      log(a6);
+      a6.sort();
+      log(a6);
+
+      a6.sort(function(a, b) { return a.age > b.age } );
+      log(a6);
+
+      function my_iter_fn(value, index, arr) {
+	  log("xxx " + index + "] " + value.name);
+      }
+      
+      a6.forEach(my_iter_fn);
+
+      a6.push({name:"Julia", age:"25"});
+      a6.forEach(my_iter_fn);
+
+      a6.unshift({name:"Gary", age:"60"});
+      a6.forEach(my_iter_fn);
+
+      // pop() removes element from end - rev to push()
+      // shift() removed element from beginning rev to unshift()
+      log(a6.pop());
+      a6.forEach(my_iter_fn);
+
+      log(a5.toString());
+      log(a5.join("|"))
+      log("Hello " + a5);
+
+      a5.splice(2,2, "ringo");
+      log(a5.toString());
+
+      a5 = a5.concat(["george", "diana"]);
+      log(a5.toString());
+
+      var a7 = a5.slice(2, 5);
+      log(a7.slice());
+
+      a5[2] = "paul";
+      log(a5.toString());
+      log(a7.toString());
+
+      var a8 = a6.map(function(e) {
+	  return e.name;
+      });
+      log(a6);
+      log(a8);
+
+      log([1, 2, 3, 4, 5].map(function(n) { return n * n; }));
+
+      log(a6.filter(function(e) { return e.name.indexOf("a") >= 0;}));
+
+      log([1, 2, 3, 4, 5].reduce(function(res, n) {
+	  log("res=" + res + "; n=" + n);
+	  return res + n;
+      }));
+
+      log(a6.every(function(e) {
+	  return e.age >= 10;
+      }));
+      
+      log(a6.some(function(e) {
+	  return e.age >= 70;
+      }));
+
+      var d1 = new Date();
+      log(typeof d1);
+      log(d1);
+
+      var d2 = new Date("2020-01-01 15:30:00");
+      log(d2);
+      log(d2.toString());
+      log(d2.toUTCString());
+      log(d2.toISOString());
+
+      log(Math);
+      log(Math.PI * Math.sin(Math.PI / 2.0)); // PI * sin(PI/2)
+
+      log(Math.random());
+      log(Math.random());
+      log(Math.random());
+
+      if(a2.length > 2) {
+	  log("hello");
+      }
+      else {
+	  log("ehllo");
+      }
+
+      switch(a2[1]) {
+      case "One":
+	  log("Good");
+	  break;
+      case "Two":
+	  log("Bad");
+	  break;
+      default:
+	  log("Ugly");
+	  break;
+      }
+
+
+      for(i=0;i<10; ++i) {
+	  log(i);
+      }
+
+      for(i in a2) {
+	  log("i=" + i + " -> " + a2[i]);
+      }
+
+      for(i of a2) {
+	  log("i=" + i);
+      }
+
+      //var obj = {name:"Dmitry", age:30, dob:new Date("2000-03-15")};
+      //for(i of obj) {
+      //  log("i=" + i);
+      //}
+
+      var x=1;
+      while(x<10) {
+	  //...
+	  x += 1;
+      }
+
+      //do {
+	//  ..
+      //} while(condition)
+
+      function fn1() {
+	  log(this);
+      }
+      
+      fn1();
+      
+    </script>
+  </body>
+</html>

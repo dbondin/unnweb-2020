@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <style>
+      .test1 {
+	  color: red;
+	  background-color: yellow;
+	  border-style: solid;
+	  border-color: black;
+	  border-width: 1px;
+      }
+      .test2 {
+	  text-align: center;
+      }
+      .test3 {
+	  text-align: justify;
+      }
+      .test4 {
+	  width: 50%;
+	  height: 200px;
+	  vertical-align: bottom; /* ??? */
+      }
+      .test5 {
+	  text-decoration: line-through;
+	  text-transform: capitalize;
+	  text-indent: 20px;
+      }
+      .test6 {
+	  font-family: serif;
+	  font-size: 5em;
+      }
+      .test7 {
+	  font-family: "Noto Sans", sans-serif;
+	  font-size: 5em;
+      }
+      .test7::first-letter {
+	  font-weight: bold;
+      }
+      .test8 {
+	  font-size: 10vw;
+      }
+      .test9 {
+	  font-size: 10vw;
+	  font-family: "Sofia";
+      }
+
+      ul {
+	  /*
+	  list-style-type: square;
+	 */
+	  list-style-image: url("dot.gif");
+      }
+
+      ol {
+	  list-style-type: upper-roman;
+      }
+
+      li {
+	  border: solid 1px black;
+      }
+      
+      .test10 {
+	  list-style-position: outside;
+      }
+
+      .test11 {
+	  list-style-position: inside;
+      }
+
+      table, td, th {
+	  border: solid 1px black;
+	  border-collapse: collapse;
+	  text-align: center;
+      }
+
+      tr:nth-child(even) {
+	  background-color: #e0e0e0;	  
+      }
+      
+      tr:nth-child(odd) {
+	  background-color: #e0e0ff;	  
+      }
+      
+      tr:hover {
+	  background-color: #c0c0c0;
+      }
+
+      div.table-scroll {
+	  overflow-x: auto;
+      }
+
+
+      .test12 {
+	  width: 200px;
+	  height: 100px;
+	  overflow: auto;
+      }
+
+      div a {
+	  font-size: 2em;
+      }
+
+      .test13 + p {
+	  color: green;
+      }
+      
+      .test13 ~ p {
+	  background-color: #ffe0e0;
+      }
+
+      .test14 > img {
+	  float: left;
+	  display: none;
+      }
+      
+      .test14:hover > img {
+	  display: inline;
+      }
+
+      #counter-test {
+	  counter-reset: my-counter;
+      }
+
+      #counter-test > h1::before {
+	  counter-increment: my-counter;
+	  content: "Chapter " counter(my-counter) ": "
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div class="test1">Hello World</div>
+    <div class="test1 test2">Hello World</div>
+    <div class="test1 test3">
+      Hello World. Hello World. Hello World. Hello World. Hello World. Hello World. Hello World. Hello World. Hello World. Hello World. Hello World. Hello World. Hello World. Hello World. Hello World. Hello World. Hello World. Hello World. Hello World. Hello World. 
+    </div>
+    <div class="test1 test4">Vertial aling</div>
+    <div class="test1 test5">yesterday all my troubles seens so far away. yesterday all my troubles seens so far away. yesterday all my troubles seens so far away. yesterday all my troubles seens so far away. yesterday all my troubles seens so far away.</div>
+    <div class="test1 test6">Font</div>
+    <div class="test1 test7">Font</div>    
+    <div class="test1 test8">Font</div>    
+    <div class="test1 test9">Font</div>
+    <br>
+    <ol>
+      <li>first
+      <li>second
+      <li>third
+    </ol>
+    <ul class="test10">
+      <li>first
+      <li>second
+      <li>third
+    </ul>
+    <ul class="test11">
+      <li>first
+      <li>second
+      <li>third
+    </ul>
+
+    <div class="table-scroll">
+    <table>
+      <tr>
+	<th>column 1</th>
+	<th>column 2</th>
+	<th>column 3</th>
+	<th>column 4</th>
+	<th>column 5</th>
+	<th>column 6</th>
+	<th>column 7</th>
+	<th>column 8</th>
+	<th>column 9</th>
+      </tr>
+      <tr>
+	<td>cell</td>
+	<td>cell</td>
+	<td>cell</td>
+	<td>cell</td>
+	<td>cell</td>
+	<td>cell</td>
+	<td>cell</td>
+	<td>cell</td>
+	<td>cell</td>
+      </tr>
+      <tr>
+	<td>cell</td>
+	<td>cell</td>
+	<td>cell</td>
+	<td>cell</td>
+	<td>cell</td>
+	<td>cell</td>
+	<td>cell</td>
+	<td>cell</td>
+	<td>cell</td>
+      </tr>
+      <tr>
+	<td>cell</td>
+	<td>cell</td>
+	<td>cell</td>
+	<td>cell</td>
+	<td>cell</td>
+	<td>cell</td>
+	<td>cell</td>
+	<td>cell</td>
+	<td>cell</td>
+      </tr>
+      <tr>
+	<td>cell</td>
+	<td>cell</td>
+	<td>cell</td>
+	<td>cell</td>
+	<td>cell</td>
+	<td>cell</td>
+	<td>cell</td>
+	<td>cell</td>
+	<td>cell</td>
+      </tr>
+      <tr>
+	<td>cell</td>
+	<td>cell</td>
+	<td>cell</td>
+	<td>cell</td>
+	<td>cell</td>
+	<td>cell</td>
+	<td>cell</td>
+	<td>cell</td>
+	<td>cell</td>
+      </tr>
+      <tr>
+	<td>cell</td>
+	<td>cell</td>
+	<td>cell</td>
+	<td>cell</td>
+	<td>cell</td>
+	<td>cell</td>
+	<td>cell</td>
+	<td>cell</td>
+	<td>cell</td>
+      </tr>
+    </table>
+    </div>
+    <div class="test1">
+      dshjfhdkjfhkfjd
+      <div class="test1" style="display: inline;">DIV</div>
+      djfjdgkfdghdfjkghkjdfgh
+    </div>
+
+    <div class="test1">
+      ABC1
+    </div>
+    <div class="test1" style="z-index: -1; position: relative; left: 20px; top: -10px;">
+      ABC2
+    </div>
+    <div class="test1">
+      ABC3
+    </div>
+    <div class="test1" style="position: fixed; top: 0px; right: 0px;">
+      ABC4
+    </div>
+    <div class="test1" style="position: absolute; right: 50px;">
+      ABC5
+    </div>
+
+    <div class="test1 test12">yesterday all my troubles seens so far away. yesterday all my troubles seens so far away. yesterday all my troubles seens so far away. yesterday all my troubles seens so far away. yesterday all my troubles seens so far away.</div>
+    <div>NEXT ONE</div>
+
+    <div class="test1" style="height: 32px; overflow: auto;">
+      <img style="float: right;" src="image.jpg">
+      yesterday all my troubles seens so far away. yesterday all my troubles seens so far away. yesterday all my troubles seens so far away. yesterday all my troubles seens so far away. yesterday all my troubles seens so far away.
+    </div>
+    
+    <div class="test1" style="width: 200px; margin: auto;">
+      yesterday all my troubles seens so far away. yesterday all my troubles seens so far away. yesterday all my troubles seens so far away. yesterday all my troubles seens so far away. yesterday all my troubles seens so far away.
+    </div>
+    <a href="http://google.com">Go to Google</a>
+    <div>
+      <a href="http://google.com">Go to Google</a>
+      <ul>
+	<li><a href="http://google.com">Go to Google</a>
+      </ul>
+    </div>
+
+    <p>para1</p> 
+    <p>para2</p> 
+    <div class="test13">dnwsjfd</div>
+    <p>para3</p> 
+    <p>para4</p> 
+    <p>para5</p>
+
+    <div class="test1 test14"><img src="image.jpg" style="opacity: 0.1;"/>Place a mouse here</div>
+    <br>
+    <br>
+    <br>
+    <div id="counter-test">
+      <h1>introduction</h1>
+      fndjkshfjkfdhgfd
+      jfdkhgkjdfg
+      jfkdhkgfd
+      <h1>basics</h1>
+      fndkjfndjkg
+      fndskfnfdl
+      fsdjkfjld
+      <h1>conclusion</h1>
+      dsdhjfhd
+      fdjfdj
+      dsifuri
+      sjdxbs
+    </div>
+  </body>
+</html>

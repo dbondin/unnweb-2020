@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>sample 5</title>
+    <style>
+      .my-div {
+	  background-color: yellow;
+      }
+
+      .my-div-disabled {
+	  display: none;
+      }
+
+      .my-div-enabled {
+	  display: block;
+	  background-color: red;
+      }
+      
+    </style>
+  </head>
+  <body>
+    sample 5
+    <div class="my-div" id="my-div"></div>
+    <div class="my-div" id="my-div-2" onmouseover="myover()" onmouseout="myout()" onclick="alert('Do not touch me !!!')">Place the mouse pointer over me</div>
+    <div class="my-div-disabled" id="my-div-3">Ha-Ha-Ha</div>
+    <script language="javascript">
+      var x = 0;
+      var y;
+      var a=123, b="hello";
+      document.getElementById('my-div').innerHTML = "Hello <b>World</b>";
+      document.write("Hello <b>World !!!</b>");
+      console.log("testing console " + x + " " + y);
+      console.log("(2+2)*2=" + ((2+2)*2) );
+      console.log("1Mb=" + 2**20 + " bytes" );
+      x = 10;
+      y = 20;
+      y += x;
+      console.log("y=" + y);
+      var s1 = "Hello";
+      s1 = s1 + " " + "World";
+      s1 += "!!!";
+      console.log("s1=" + s1);
+
+      s1 = "y=" + y + " dsjds" + 3.14 + " dsjkdjskds";
+      console.log(s1);
+
+      console.log(x>10);
+      console.log(x==10);
+      console.log((x==11)?"A":"B");
+
+      var x=10; // number
+      var y="10"; // string
+      console.log("x==y ? " + (x==y));
+      console.log("x===y ? " + (x===y)); // Use this une !!! SIC
+
+      console.log("? " + (x===y || x===10));
+
+      console.log("typeof(x) = " + typeof(x));
+      console.log("typeof(y) = " + typeof(y));
+      console.log("typeof(true) = " + typeof(true));
+      console.log("typeof(document) = " + typeof(document));
+      console.log("typeof(console.log) = " + typeof(console.log));
+      console.log("typeof(typeof(x)) = " + typeof(typeof(x)));
+      console.log("typeof([1, 2, 3]) = " + typeof([1, 2, 3]));
+      var q;
+      console.log("typeof(q) = " + typeof(q));
+
+      y = "Hello"; //  Basic 'string' type
+      y = new String("Hello"); // NOT the same as previous line. Object String
+      console.log("y instanceof string = " + (y instanceof String));
+
+      // if(typeof(x)==="string") ....
+
+      console.log("x&3 = " + (x&3)); // x == 10 == b1010 & 0011 == 0010 == 2
+
+      x=10;
+      console.log("- typeof(x) = " + typeof(x));
+      x="hello";
+      console.log("- typeof(x) = " + typeof(x));
+      x=true;
+      console.log("- typeof(x) = " + typeof(x));
+
+      var s1="hello";
+      var s2='hello';
+      console.log("s1===s2 -> " + (s1===s2));
+
+      var a = [100, 200, 300];
+      console.log("a[1]=" + a[1]);
+
+      // JSON - Java Script Object Notation
+      var o = {name:"John", age:15, gender:"m"};
+      console.log(o);
+      console.log(o.name);
+      console.log(o["name"]);
+      o.lastName = "Connor";
+      console.log(o);
+
+      //var u;
+      var u = undefined;
+      console.log("u = " + u);
+      console.log("typeof(u) = " + typeof(u));
+
+      var v = null;
+      console.log("v = " + v);
+      console.log("typeof(v) = " + typeof(v));
+
+      console.log("u==v -> " + (u==v));
+      console.log("u===v -> " + (u===v));
+
+      function func1() {
+	  x = 123;
+	  var y=444;
+	  console.log("inside func1() y=" + y);
+      }
+
+      console.log("func1 x=" + x + "; y=" + y);
+      func1();
+      console.log("func1 x=" + x + "; y=" + y);
+
+      function func2() {
+	  return "ha-ha-ha";
+      }
+
+      var f = func2();
+      console.log("f=" + f);
+      console.log("func2()=" + func2());
+
+      function func3() {
+	  return function () {
+	      return 123;
+	  }
+      }
+
+      console.log("func3()=" + func3());
+      console.log("func3()()=" + func3()());
+
+      var g = func2;
+
+      console.log("g()=" + g());
+
+      var func4 = function() {
+      }
+
+      var myDiv3 = document.getElementById("my-div-3");
+      
+      function myover() {
+	  console.log("myover()");
+	  myDiv3.className = "my-div-enabled";
+      }
+
+      function myout() {
+	  console.log("myout()");
+	  myDiv3.className = "my-div-disabled";
+      }
+      
+    </script>
+  </body>
+</html>
