@@ -1,6 +1,6 @@
 {
   "movies" : [
     { "id" : 1, "title": "Matrix" },
-    { "id" : 2, "title": "Terminator" )
+    { "id" : 2, "title": "Terminator" }
   ]
 }
