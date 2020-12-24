@@ -1,0 +1,46 @@
+.main-div:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.students-div {
+    //background-color: yellow;
+    float: left;
+    width: 30%;
+}
+
+.posts-div {
+    //background-color: magenta;
+    float: left;
+    width: 70%;
+}
+
+.student-div {
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    margin: 8px;
+    text-overflow: clip;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.student-selected-div {
+    background-color: lightgray;
+}
+
+.post-div {
+    border-style: solid;
+    border-color: red;
+    border-width: 1px;
+    margin: 8px;    
+}
+
+.post-title {
+    font-weight: bold;
+}
+
+.post-body {
+}
+
