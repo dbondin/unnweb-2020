@@ -7,3 +7,4 @@
 | Shaikh Nasim Ali        | reqres.in                                  | 5     |
 | MeD Safi                | jsonplaceholder/todos/ nodejs/react        | 5     |
 | Messaoud Djardi         | jsonplaceholder/posts/ nodejs/react        | 5     |
+| МБА ОТТУ ЛУИ ЖУЛЬЕН     | node/react                                 | 5     |
